@@ -23,7 +23,9 @@ const forecast = (latitude, longitude, callback) => {
       //   temperature: body.current.temperature,
       //   precip: body.current.precip,
       // })
-      callback(undefined, "It's currently " + body.current.temperature + " degrees out. There is " + body.current.precip + "% chance of rain.")
+      console.log(body.current);
+      
+      callback(undefined, "It's currently " + body.current.temperature + " degrees out. There is " + body.current.precip + "% chance of rain." + "The pressure is " + body.current.pressure + " hpa.")
     }
   })
 }
